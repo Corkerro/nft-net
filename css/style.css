@@ -28,7 +28,7 @@
   font-family: NeueMachina;
   font-display: swap;
   src: url("../fonts/NeueMachina-Ultrabold.woff2") format("woff2"), url("../fonts/NeueMachina-Ultrabold.woff") format("woff");
-  font-weight: 800;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -273,6 +273,11 @@ h1 {
       2.625rem + 1.75 * (100vw - 20rem) / 73.125
     );
   }
+}
+
+.page,
+.main__container {
+  will-change: transform;
 }
 
 .header {
@@ -965,7 +970,7 @@ h1 {
 
 .marquee {
   margin-top: -3.125rem;
-  margin-bottom: 62.5rem;
+  padding-bottom: 1000px;
 }
 
 .marquee-container1 {

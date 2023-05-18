@@ -88,6 +88,26 @@
         }));
     }
     windowLoad();
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    if (ScrollTrigger.isTouch !== 1) {
+        ScrollSmoother.create({
+            wrapper: ".wrapper",
+            content: ".page",
+            smooth: 1.5,
+            effects: true
+        });
+        gsap.fromTo(".main__container", {
+            opacity: 1
+        }, {
+            opacity: 0,
+            scrollTrigger: {
+                trigger: ".main__container",
+                start: "100",
+                end: "700",
+                scrub: true
+            }
+        });
+    }
     window["FLS"] = true;
     isWebp();
     headerScroll();
