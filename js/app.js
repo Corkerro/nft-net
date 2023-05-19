@@ -48,52 +48,12 @@
             }));
         }
     }), 0);
-    function windowLoad() {
-        function digitsCountersInit(digitsCountersItems) {
-            let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-digits-counter]");
-            if (digitsCounters.length) digitsCounters.forEach((digitsCounter => {
-                digitsCountersAnimate(digitsCounter);
-            }));
-        }
-        function digitsCountersAnimate(digitsCounter) {
-            let startTimestamp = null;
-            const duration = parseInt(digitsCounter.dataset.digitsCounter) ? parseInt(digitsCounter.dataset.digitsCounter) : 1e3;
-            const startValue = parseInt(digitsCounter.innerHTML);
-            const startPosition = 0;
-            const step = timestamp => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                digitsCounter.innerHTML = Math.floor(progress * (startPosition + startValue));
-                if (progress < 1) window.requestAnimationFrame(step);
-            };
-            window.requestAnimationFrame(step);
-        }
-        digitsCountersInit();
-        let options = {
-            threshold: .3
-        };
-        let observer = new IntersectionObserver(((entries, observer) => {
-            entries.forEach((entry => {
-                if (entry.isIntersecting) {
-                    const targetElement = entry.target;
-                    const digitsCountersItems = targetElement.querySelectorAll("[data-digits-counter]");
-                    if (digitsCountersItems.length) digitsCountersInit(digitsCountersItems);
-                    observer.unobserve(targetElement);
-                }
-            }));
-        }), options);
-        let sections = document.querySelectorAll(".page__section");
-        if (sections.length) sections.forEach((section => {
-            observer.observe(section);
-        }));
-    }
-    windowLoad();
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     if (ScrollTrigger.isTouch !== 1) {
         ScrollSmoother.create({
             wrapper: ".wrapper",
-            content: ".page",
-            smooth: 1.5,
+            content: ".content",
+            smooth: 2,
             effects: true
         });
         gsap.fromTo(".main__container", {
@@ -105,6 +65,45 @@
                 start: "100",
                 end: "700",
                 scrub: true
+            }
+        });
+        gsap.fromTo(".about__left", {
+            opacity: 0,
+            x: -50
+        }, {
+            opacity: 1,
+            x: 0,
+            scrollTrigger: {
+                trigger: ".about",
+                scrub: true,
+                start: "-500",
+                end: "100"
+            }
+        });
+        gsap.fromTo(".about__h2", {
+            opacity: 0,
+            x: -50
+        }, {
+            opacity: 1,
+            x: 0,
+            scrollTrigger: {
+                trigger: ".about",
+                scrub: true,
+                start: "-700",
+                end: "-200"
+            }
+        });
+        gsap.fromTo(".about__right", {
+            opacity: 0,
+            x: 50
+        }, {
+            opacity: 1,
+            x: 0,
+            scrollTrigger: {
+                trigger: ".about",
+                scrub: true,
+                start: "-500",
+                end: "100"
             }
         });
     }

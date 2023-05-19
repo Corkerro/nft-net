@@ -6,41 +6,41 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230518212104">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230519112616">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://corkerro.github.io/nft-net/libs/gsap/gsap.min.js?_v=20230518212104" defer></script>
-	<script src="https://corkerro.github.io/nft-net/libs/gsap/ScrollTrigger.min.js?_v=20230518212104" defer></script>
-	<script src="https://corkerro.github.io/nft-net/libs/gsap/ScrollSmoother.min.js?_v=20230518212104" defer></script>
-	<script src="js/app.min.js?_v=20230518212104" defer></script>
+	<script src="./libs/gsap/gsap.min.js?_v=20230519112616" defer></script>
+	<script src="./libs/gsap/ScrollTrigger.min.js?_v=20230519112616" defer></script>
+	<script src="./libs/gsap/ScrollSmoother.min.js?_v=20230519112616" defer></script>
+	<script src="js/app.min.js?_v=20230519112616" defer></script>
 </head>
 
 <body>
 	<div class="wrapper">
-		<div class="content">
-			<header data-scroll="40" class="header">
-				<div class="header__container">
-					<a href="#" class="header__logo"><img src="img/logo.svg" alt="">NFT.net</a>
-					<div class="header__menu menu">
-						<button type="button" class="menu__icon icon-menu"><span></span></button>
-						<nav class="menu__body">
-							<ul class="menu__list">
-								<li class="menu__item"><a href="#" class="menu__link _active">Home</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">About us</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">Collection</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">People</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">Community</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="header__buttons">
-						<a href="#" class="header__href">Log in</a>
-						<a href="#" class="header__button button button-stroke">Register</a>
-					</div>
+		<header data-scroll="40" class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo"><img src="img/logo.svg" alt="">NFT.net</a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" class="menu__link _active">Home</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">About us</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Collection</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">People</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Community</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Contacts</a></li>
+						</ul>
+					</nav>
 				</div>
-			</header>
+				<div class="header__buttons">
+					<a href="#" class="header__href">Log in</a>
+					<a href="#" class="header__button button button-stroke">Register</a>
+				</div>
+			</div>
+		</header>
+		<div class="content">
 			<main class="page">
 				<div class="main">
 					<div class="main__light-l1"></div>
@@ -48,9 +48,11 @@
 					<div class="main__light-l2"></div>
 					<div data-speed=".6" class="main__container">
 						<div class="main__content">
-							<h1>Create and sell your unique NFT <img src="img/main/star.png" alt=""></h1>
-							<p>Discover the best NFT collections on our marketplace. Buy and sell them for the best deal with us</p>
-							<a href="#" class="main__button button button-fill">Explore NFT <img src="img/main/ion_rocket-sharp.svg" alt=""></a>
+							<h1>Create and sell your unique NFT <img src="img/star.png" alt=""></h1>
+							<p>Discover the best NFT collections on our marketplace. Buy and sell them for the best deal
+								with us</p>
+							<a href="#" class="main__button button button-fill">Explore NFT <img
+									src="img/main/ion_rocket-sharp.svg" alt=""></a>
 						</div>
 						<a href="#" class="main__nft">
 							<img src="img/main/arrow.svg" alt="" class="main__nft_arrow">
@@ -100,13 +102,50 @@
 						</div>
 					</div>
 				</div>
+				<div class="about">
+					<div class="about__container">
+						<h2 class="about__h2">About us <img src="img/star.png" alt=""></h2>
+						<div class="about__content">
+							<div data-speed="0.98" class="about__left">
+								<div class="about__left_img"><img src="img/about/FA77b15XoAESSIG-PhotoRoom 3.png"
+										alt=""></div>
+							</div>
+							<div data-speed="1.2" class="about__right">
+								<h5>We provide the best conditions for buying, holding and selling your NFT assets</h5>
+								<p>Our marketplace will help you to buy and then sell at a bargain price your NFT asset.
+									We guarantee
+									the safety of your assets and are responsible for the guarantee of the assets
+									provided on our
+									marketplace. All NFT assets on our Marketplace are insured, you do not have to worry
+									about their
+									safety. </p>
+								<div data-lag=".005" class="about__right_block">
+									<div class="about__numbers">
+										<h2><span data-digits-counter>10</span>K+</h2>
+										<p>Collections</p>
+									</div>
+									<div class="about__devider"></div>
+									<div class="about__numbers">
+										<h2><span data-digits-counter>9</span>K+</h2>
+										<p>Auctions</p>
+									</div>
+									<div class="about__devider"></div>
+									<div class="about__numbers">
+										<h2><span data-digits-counter>83</span>K+</h2>
+										<p>Artists</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</main>
 			<footer class="footer">
 				<div class="footer__container">
+
 				</div>
 			</footer>
 		</div>
-
 	</div>
 </body>
 
