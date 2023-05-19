@@ -6,14 +6,14 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230519112616">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230519214037">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="./libs/gsap/gsap.min.js?_v=20230519112616" defer></script>
-	<script src="./libs/gsap/ScrollTrigger.min.js?_v=20230519112616" defer></script>
-	<script src="./libs/gsap/ScrollSmoother.min.js?_v=20230519112616" defer></script>
-	<script src="js/app.min.js?_v=20230519112616" defer></script>
+	<script src="./libs/gsap/gsap.min.js?_v=20230519214037" defer></script>
+	<script src="./libs/gsap/ScrollTrigger.min.js?_v=20230519214037" defer></script>
+	<script src="./libs/gsap/ScrollSmoother.min.js?_v=20230519214037" defer></script>
+	<script src="js/app.min.js?_v=20230519214037" defer></script>
 </head>
 
 <body>
@@ -22,11 +22,12 @@
 			<div class="header__container">
 				<a href="#" class="header__logo"><img src="img/logo.svg" alt="">NFT.net</a>
 				<div class="header__menu menu">
-					<button type="button" class="menu__icon icon-menu"><span></span></button>
+
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link _active">Home</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">About us</a></li>
+							<li class="menu__item"><a href="#main" data-goto=".main" class="menu__link">Home</a></li>
+							<li class="menu__item"><a href="#about" data-goto-top="90" data-goto=".about"
+									class="menu__link">About us</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Collection</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">People</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Community</a></li>
@@ -35,14 +36,16 @@
 					</nav>
 				</div>
 				<div class="header__buttons">
-					<a href="#" class="header__href">Log in</a>
-					<a href="#" class="header__button button button-stroke">Register</a>
+					<a data-da=".menu__list,560" href="#" class="header__href">Log in</a>
+					<a data-da=".menu__list,440" href="#" class="header__button button button-stroke">Register</a>
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
 				</div>
+
 			</div>
 		</header>
 		<div class="content">
 			<main class="page">
-				<div class="main">
+				<section class="main" id="main">
 					<div class="main__light-l1"></div>
 					<img src="img/main/spiral.svg" alt="" class="main__spiral">
 					<div class="main__light-l2"></div>
@@ -59,7 +62,7 @@
 							<div class="main__nft_inner"><img src="img//main/nft.png" alt=""></div>
 						</a>
 					</div>
-				</div>
+				</section>
 				<div data-lag=".3" class="marquee">
 					<div class="marquee-container1">
 						<div class="marquee__block">
@@ -102,7 +105,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="about">
+				<section class="about" id="about">
 					<div class="about__container">
 						<h2 class="about__h2">About us <img src="img/star.png" alt=""></h2>
 						<div class="about__content">
@@ -138,7 +141,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</main>
 			<footer class="footer">
 				<div class="footer__container">
